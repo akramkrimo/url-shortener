@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 900px;
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./autumn.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form{
+    
+    position: absolute;
+    top: 150px;
+    left: 380px;
+    width: 700px;
+    height: 560px;
+    background: rgb(255, 255, 255, 0.99);
+    text-align: center;
+    box-shadow: -5px -7px 7px -5px #333, 5px 5px 5px -5px #333;
+    border-radius: 12px;
+}
+
+h1{
+  
+    font-family: 'Josefin sans', serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(0, 228, 245);
+    margin: 28px;
+}
+
+button{
+    position: relative;
+    top: 105px;
+    left: 25%;
+    width: 50%;
+    margin: 20px auto;
+    display: block;
+    padding: 10px;
+}
+
+.form-control{
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid rgb(139, 139, 139);
+    font-family: 'Poppins', serif;
+    font-size: 16px;
+    margin-top: 0px;
+    color: rgb(0, 225, 255);
+}
+
+.form-control, button{
+   margin-top: 30px;
+   outline: none;
+   border: 1px solid ;
+   border-radius: 40px;
+   background: rgb(255, 255, 255);
+   color: rgb(0, 228, 245);
+   font-family: 'Poppins', serif;
+   font-size: 17px;
+   transition: 500ms;
+}
+
+
+.form-control::placeholder{
+    font-family: 'Poppins', serif;
+}
+
+.form-control:focus, .form-control:active{
+    animation: border 300ms ease-in-out forwards;
+
+}
+
+@keyframes border{
+    0%{
+        border-bottom: 1px solid rgb(139, 139, 139);
+
+    }
+    100%{
+        border-color: rgb(0, 228, 245);
+    }
+}
+
+button:hover, button:focus, button:active {
+    background: rgb(0, 228, 245);
+    color: #Fff;
+    
+}

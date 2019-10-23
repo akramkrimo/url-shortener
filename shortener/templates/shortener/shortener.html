@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="col-6 mx-auto mt-5">
+    <form method="POST">
+        <h1 class="mb-3">URL SHORTENER</h1>
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% if url %}
+    <a href="{% url 'shortener:redirect' slug %}" class="mt-2 " target="_blank">{{url.short_url}}</a>
+    {% endif %}
+    <form action="{% url 'accounts:logout'%}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Log out">
+    </form>
+</div>
+
+{% endblock %}

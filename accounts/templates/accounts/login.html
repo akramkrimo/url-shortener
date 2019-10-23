@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="col-4 mx-auto mt-5">
+            <form action="{% url 'accounts:login' %}" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+{% endblock %}
